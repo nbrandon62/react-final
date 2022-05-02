@@ -1,9 +1,14 @@
 import React from 'react'
+import Jumbotron from '../Components/Jumbotron'
 import NavBar from '../Components/NavBar'
 
 const HomePage = () => {
   return (
-    <NavBar />
+    <div>
+      <NavBar />
+      <Jumbotron />
+    </div>
+
   )
 }
 
