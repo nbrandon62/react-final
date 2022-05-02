@@ -10,13 +10,13 @@ const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  margin: 15px;
   align-items: center;
 `
-const Left = styled.div`
+const Logo = styled.div`
   flex:1;
 `
-const Right = styled.div`
+const CartWrapper = styled.div`
   flex:1;
   text-align: end;
 `
@@ -30,15 +30,15 @@ const NavBar = () => {
     <Container>
       <Wrapper>
 
-        <Left> SLAMAZON </Left>
+        <Logo> SLAMAZON </Logo>
 
-        <Right>
+        <CartWrapper>
           <ShoppingCart>
             <Badge badgeContent={10} color="secondary">
               <ShoppingCartOutlinedIcon />
             </Badge>
           </ShoppingCart>
-        </Right>
+        </CartWrapper>
 
       </Wrapper>
     </Container>
