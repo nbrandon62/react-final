@@ -16,5 +16,23 @@ export const jumboItems = [
         title: "NEW EARLY FALL SALE",
         description: "Up to 40% off select Winter items",
         // img:
+    },
+    {
+        id: 4,
+        title: "NEW WINTER SALE",
+        description: "Up to 40% off select Winter items",
+        // img:
+    },
+    {
+        id: 5,
+        title: "NEW WINTER SALE",
+        description: "Up to 40% off select Winter items",
+        // img:
+    },
+    {
+        id: 6,
+        title: "NEW WINTER SALE",
+        description: "Up to 40% off select Winter items",
+        // img:
     }
 ]

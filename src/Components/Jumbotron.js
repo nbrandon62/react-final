@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
-import {jumboItems} from "../data"; 
+import {jumboItems} from "../Utils/data"; 
 import { useState } from 'react';
 
 const Container = styled.div`
