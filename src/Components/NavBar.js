@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 `
 const Logo = styled.div`
   flex:1;
+  font-size: 30px;
 `
 const CartWrapper = styled.div`
   flex:1;
@@ -31,7 +32,7 @@ const NavBar = () => {
     <Container>
       <Wrapper>
 
-        <Logo> SLAMAZON </Logo>
+        <Logo> AllMart </Logo>
 
         <CartWrapper>
           <ShoppingCart>

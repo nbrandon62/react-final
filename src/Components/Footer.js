@@ -34,7 +34,7 @@ const Footer = () => {
         </IconContainer> 
 
         <CopyrightContainer>
-            <Copyright> SLAMAZON 2022</Copyright>
+            <Copyright> AllMart 2022©</Copyright>
         </CopyrightContainer>
     </Container>
   )
