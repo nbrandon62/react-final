@@ -5,7 +5,8 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Container = styled.div`
   height:  100px;
- `
+  background-color: #DAEDFF;
+`
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
@@ -34,7 +35,7 @@ const NavBar = () => {
 
         <CartWrapper>
           <ShoppingCart>
-            <Badge badgeContent={10} color="secondary">
+            <Badge badgeContent={10} color="primary">
               <ShoppingCartOutlinedIcon />
             </Badge>
           </ShoppingCart>

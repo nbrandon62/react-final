@@ -7,7 +7,7 @@ import ProductCard from './ProductCard'
 const Container = styled.div`
     display: flex;
     padding: 20px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 `
 const ProductGrid = () => {
   return (

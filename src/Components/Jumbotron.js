@@ -41,7 +41,7 @@ const Slide = styled.div`
     height: 100vh;
 
 `
-const ImageContainer = styled.img`
+const ImageContainer = styled.div`
     height: 100%;
     flex: 1;
     margin-left: 5rem;
@@ -83,7 +83,7 @@ const Jumbotron = () => {
         <Wrapper jumboIndex = { jumboIndex }>
             {jumboItems.map(item=>(
               <Slide>
-                <ImageContainer>{/* {item.img} */}</ImageContainer>
+                <ImageContainer>{item.title} {/* this is where the API images will go */} </ImageContainer>
                 <InfoContainer>
                     <Title>{item.title}</Title>
                     <Description>{item.description}</Description>
