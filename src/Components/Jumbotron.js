@@ -39,19 +39,20 @@ const Slide = styled.div`
     align-items: center;
     width: 100vw;
     height: 100vh;
-
 `
 const ImageContainer = styled.div`
     height: 100%;
     flex: 1;
     margin-left: 5rem;
+
 `
-// const Image = styled.div`
-//     height: 80%;
-// `
+const Image = styled.div`
+    height: 90%;
+    background-color: black;
+`
 const InfoContainer = styled.div`
     flex: 1;
-    margin-left: 10rem;  
+    margin-left: 8rem;  
 `
 const Title = styled.h1`
     font-size: 70px;
@@ -60,6 +61,12 @@ const Description = styled.p `
     font-size: 20px ;
     margin: 50px 0px;
     letter-spacing: 1px;
+`
+const Button = styled.button`
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
 `
 
 
@@ -83,14 +90,16 @@ const Jumbotron = () => {
         <Wrapper jumboIndex = { jumboIndex }>
             {jumboItems.map(item=>(
               <Slide>
-                <ImageContainer>{item.img} </ImageContainer>
+                <ImageContainer> <Image /> </ImageContainer>
                 <InfoContainer>
                     <Title>{item.title}</Title>
                     <Description>{item.description}</Description>
+                    <Button>SHOP NOW</Button>
                 </InfoContainer>
               </Slide>
             ))}  
         </Wrapper>
+        
 
         <Arrow direction = "right" onClick = {() => handleClick("right")}>
             <ArrowCircleRightOutlinedIcon /> 

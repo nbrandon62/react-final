@@ -12,12 +12,14 @@ const Wrapper = styled.div`
 `
 const ImageContainer = styled.div`
   flex: 2;
+  background: black; 
+  height: 500px;
+  width: 350px;
 `
-const Image = styled.div`
+const Image = styled.img`
   width: 100%;
   height: 80vh;
   object-fit:cover;
-  background-color:black;
 `
 const InfoContainer = styled.div` 
   flex: 1;
@@ -79,16 +81,17 @@ const Button = styled.button`
 const SingleProductPage = () => {
   return (
     <Container>
+        
       <Wrapper>
         <ImageContainer>
-          <Image>{/* image from API will go here */}</Image>
+
         </ImageContainer>
 
         <InfoContainer>
           {/* These are place holders for API info: title, description, and price */}
-          <Title>FJALLRAVEN backpack</Title>
-          <Description> Black backpakc made of 100jnfjsbfjbaw </Description>
-          <Price>$130</Price>
+          <Title>BackPack</Title>
+          <Description> basdkjcbaklbdflabfahjf</Description>
+          <Price> 1000</Price>
 
           {/* This is the container for the add to cart button. needs useState functionality */}
           <AddContainer>

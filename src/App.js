@@ -1,13 +1,13 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import { HomePage, ProductPage, CartPage, SingleProductPage } from './Pages';
-import { ProductGrid, ProductCard} from './Components';
+import { ProductGrid, ProductCard, NavBar} from './Components';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 
 function App() {
 
   const [products, setProductData] = useState([]);
-  // console.log ("products are: ", products )
 
     async function productData(){
       const url = 'https://fakestoreapi.com/products';
@@ -22,12 +22,11 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <HomePage />
-      <ProductGrid products = {products} />
-    </div>
-
-
+      <div>
+        <HomePage />
+        <SingleProductPage />
+        <ProductPage products = {products}/>
+      </div>
   );
 }
 

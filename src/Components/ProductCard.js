@@ -70,7 +70,7 @@ const ProductCard = ({ product }) => {
 
     <PriceContainer>
       <Price>
-        {product.price}
+        $ {product.price}
       </Price>
     </PriceContainer>
   </Container>

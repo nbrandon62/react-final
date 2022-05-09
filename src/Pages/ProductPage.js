@@ -1,12 +1,10 @@
 import React from 'react'
 import {NavBar, Footer, ProductGrid} from '../Components';
 
-const ProductPage = () => {
+const ProductPage = ({products}) => {
   return (
     <div>
-      <NavBar />
-      <ProductGrid /> 
-      <Footer />
+      <ProductGrid products = {products}/> 
     </div>
   )
 }
