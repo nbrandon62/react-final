@@ -1,46 +1,79 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
-  flex: 1;
-`
-const ImageContainer = styled.div`
-  height=100%;
-  flex:1;
+const Container = styled.div`
   margin: 10px;
-  background-color: #4285F4;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 320px;
-  min-height: 400px;
+  width: 275px;
+  height: 350px;
+  flex-direction: column;
 `
-const Image = styled.div`
-  height:80%;
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 85%;
+  height: 85%;
+  padding: 0px 6px;
+  border: 1px solid #ECEDEE;
 `
-
+const Image = styled.img`
+  width: 85%;
+  height: 80%;
+`
 const DescriptionContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content:start;
   flex: 1;
-  justify-content:center;
+  width: 85%;
+  margin: 0px 0px;
 `
 const Description = styled.div`
   display:flex;
-  justify-content: center;
+  flex: 1;
+  justify-content: start;
+  align-items: center;
+  font-size: 14px;
+`
+const PriceContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content:;
+  flex: 1;
+  width: 85%;
+  margin: 0px 0px;
+`
+const Price = styled.div`
+  display:flex;
+  flex: 1;
+  justify-content: start;
+  align-items: center;
+  font-size: 18px;
+  color: #B4B6B8;
 `
 
-const ProductCard = ({ item }) => {
+const ProductCard = ({ product }) => {
   return (
-  <Wrapper>
+  <Container>
 
     <ImageContainer>
-      <ImageContainer>{/* <Image src={item.image} />  */} image is going to go here </ImageContainer>
+      <Image src={product.image} />
     </ImageContainer>
 
     <DescriptionContainer>
-      <Description> {item.title}</Description>
+      <Description>
+         {product.title}
+      </Description>
     </DescriptionContainer>
 
-  </Wrapper>
+    <PriceContainer>
+      <Price>
+        {product.price}
+      </Price>
+    </PriceContainer>
+  </Container>
 
   )
 }

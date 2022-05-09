@@ -1,38 +1,21 @@
+
 export const jumboItems = [
     {
         id: 1,
-        title: "NEW SUMMER SALE",
-        description: "Up to 40% off select Winter items",
-        // img:
+        title: "GET THE LATEST LAPTOPS",
+        description: "Supplying the world with the newest gaming technologies",
+        img:"",
+        
     },
     {
         id: 2,
-        title: "NEW WINTER SALE",
-        description: "Up to 40% off select Winter items",
-        // img:
+        title: "SHOP JEWELRY FOR LOW PRICES",
+        description: "Up to 40% off select pieces!",
     },
     {
         id: 3,
-        title: "NEW EARLY FALL SALE",
-        description: "Up to 40% off select Winter items",
-        // img:
-    },
-    {
-        id: 4,
-        title: "NEW WINTER SALE",
-        description: "Up to 40% off select Winter items",
-        // img:
-    },
-    {
-        id: 5,
-        title: "NEW WINTER SALE",
-        description: "Up to 40% off select Winter items",
-        // img:
-    },
-    {
-        id: 6,
-        title: "NEW WINTER SALE",
-        description: "Up to 40% off select Winter items",
-        // img:
+        title: "NEW SPRING ARRIVALS",
+        description: "shop men or women for the latest fashion",
     }
+
 ]

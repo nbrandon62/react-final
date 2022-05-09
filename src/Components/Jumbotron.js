@@ -83,7 +83,7 @@ const Jumbotron = () => {
         <Wrapper jumboIndex = { jumboIndex }>
             {jumboItems.map(item=>(
               <Slide>
-                <ImageContainer>{item.title} {/* this is where the API images will go */} </ImageContainer>
+                <ImageContainer>{item.img} </ImageContainer>
                 <InfoContainer>
                     <Title>{item.title}</Title>
                     <Description>{item.description}</Description>
