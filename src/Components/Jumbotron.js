@@ -4,6 +4,8 @@ import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOu
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
 import {jumboItems} from "../Utils/data"; 
 import { useState } from 'react';
+import { Link } from "react-router-dom";
+
 
 const Container = styled.div`
     width: 100%;
@@ -94,7 +96,9 @@ const Jumbotron = () => {
                 <InfoContainer>
                     <Title>{item.title}</Title>
                     <Description>{item.description}</Description>
-                    <Button>SHOP NOW</Button>
+                    <Link to="/productpage" >
+                        <Button>SHOP NOW</Button>
+                    </Link>
                 </InfoContainer>
               </Slide>
             ))}  

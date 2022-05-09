@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Badge } from '@mui/material';
+import { Link } from 'react-router-dom';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Container = styled.div`
@@ -17,6 +18,8 @@ const Wrapper = styled.div`
 const Logo = styled.div`
   flex:1;
   font-size: 30px;
+  text-decoration: none;
+  color: black;
 `
 const CartWrapper = styled.div`
   flex:1;
@@ -26,14 +29,15 @@ const ShoppingCart = styled.div`
   font-size: 20px;
   cursor: pointer;
 `
+const styledObject ={textDecoration: "none"};
 
 const NavBar = () => {
   return (
     <Container>
       <Wrapper>
-
-        <Logo> AllMart </Logo>
-
+        <Link to="/" style={styledObject}>
+          <Logo> AllMart </Logo>
+        </Link>
         <CartWrapper>
           <ShoppingCart>
             <Badge badgeContent={10} color="primary">

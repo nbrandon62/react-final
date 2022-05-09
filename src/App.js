@@ -1,8 +1,8 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import { HomePage, ProductPage, CartPage, SingleProductPage } from './Pages';
-import { ProductGrid, ProductCard, NavBar} from './Components';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { ProductGrid, ProductCard, NavBar, Cart, Footer} from './Components';
+import { Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -22,11 +22,16 @@ function App() {
   }, [])
 
   return (
-      <div>
-        <HomePage />
-        <SingleProductPage />
-        <ProductPage products = {products}/>
-      </div>
+      <>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/productpage" element={<ProductPage products={products} />} />
+        <Route path="/productpage/:id" element={<SingleProductPage />} />
+        <Route path="*" element={<div>Page Not Found</div>} />
+      </Routes>
+      <Footer />
+      </>
   );
 }
 
