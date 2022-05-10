@@ -1,8 +1,9 @@
-import React from 'react';
+import React , { useEffect, useState} from 'react';
 import styled from 'styled-components';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
 
 
 const Container = styled.div`
@@ -14,7 +15,6 @@ const Wrapper = styled.div`
 `
 const ImageContainer = styled.div`
   flex: 2;
-  background: black; 
   height: 500px;
   width: 350px;
 `
@@ -80,24 +80,40 @@ const Button = styled.button`
 //   cursor: pointer;
 // `
 
-const SingleProductPage = ({ products }) => {
+const SingleProductPage = () => {
+
+  const [ singleProduct, setSingleProduct] = useState([])
+ 
+
 
   const {id} = useParams();
 
+  useEffect(()=>{
+    const fetchSingleProduct = async () => {
+    try{
+      const url = `https://fakestoreapi.com/products/${id}`;
+      const response = await fetch(url);
+      const data = await response.json();
+      setSingleProduct(data)
+    } catch(err) {
+      console.log(err)
+    }
+  }
+  fetchSingleProduct()
+  }, [])
 
   return (
     <Container>
-      {console.log('param', id)}
       <Wrapper>
         <ImageContainer>
-          image goes here. 
+          <Image src={singleProduct.image} />
         </ImageContainer>
 
         <InfoContainer>
           {/* These are place holders for API info: title, description, and price */}
-          <Title>title</Title>
-          <Description> basdkjcbaklbdflabfahjf</Description>
-          <Price> 1000</Price>
+          <Title>{singleProduct.title}</Title>
+          <Description> {singleProduct.description}</Description>
+          <Price> {singleProduct.price}</Price>
 
           {/* This is the container for the add to cart button. needs useState functionality */}
           <AddContainer>
