@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
+
 
 const Container = styled.div`
   margin: 10px;
@@ -54,9 +56,17 @@ const Price = styled.div`
   color: #B4B6B8;
 `
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product , id }) => {
+
+
+  const navigate = useNavigate(); 
+
+  const handleClick = (id) => {
+    navigate(`/productpage/${id}`)
+  }
+
   return (
-  <Container>
+  <Container onClick={()=>handleClick(id)}>
 
     <ImageContainer>
       <Image src={product.image} />

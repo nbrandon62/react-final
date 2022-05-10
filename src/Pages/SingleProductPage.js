@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
+import { useParams, Link } from "react-router-dom";
+
 
 const Container = styled.div`
   margin: 10px;
@@ -78,18 +80,22 @@ const Button = styled.button`
 //   cursor: pointer;
 // `
 
-const SingleProductPage = () => {
+const SingleProductPage = ({ products }) => {
+
+  const {id} = useParams();
+
+
   return (
     <Container>
-        
+      {console.log('param', id)}
       <Wrapper>
         <ImageContainer>
-
+          image goes here. 
         </ImageContainer>
 
         <InfoContainer>
           {/* These are place holders for API info: title, description, and price */}
-          <Title>BackPack</Title>
+          <Title>title</Title>
           <Description> basdkjcbaklbdflabfahjf</Description>
           <Price> 1000</Price>
 

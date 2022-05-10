@@ -27,7 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/productpage" element={<ProductPage products={products} />} />
-        <Route path="/productpage/:id" element={<SingleProductPage />} />
+        <Route path="/productpage/:id" element={<SingleProductPage products={products} />} />
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
       <Footer />
