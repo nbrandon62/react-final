@@ -1,7 +1,8 @@
-import React from 'react'
+import React , {useContext} from 'react'
 import styled from 'styled-components'
 import { SingleProductPage } from '../Pages'
 import ProductCard from './ProductCard'
+import { DataContext } from '../Context/DataContext'
 
 const Container = styled.div`
     display: flex;
@@ -10,12 +11,13 @@ const Container = styled.div`
     justity-content: center;
     align-items; center;
 `
-const ProductGrid = ({products}) => {
+const ProductGrid = () => {
+  const { productData } = useContext(DataContext);
 
   return (
     <Container>
-         {products.map((product)=> (
-          <div key={product.id}>
+         {productData.map((product, index)=> (
+          <div key={index}>
             <ProductCard product={product} id={product.id} />
           </div>
         ))} 
