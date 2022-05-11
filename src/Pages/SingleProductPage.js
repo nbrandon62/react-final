@@ -1,4 +1,4 @@
-import React , { useEffect, useState} from 'react';
+import React , { useEffect, useState, useContext} from 'react';
 import styled from 'styled-components';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
@@ -81,12 +81,10 @@ const Button = styled.button`
 // `
 
 const SingleProductPage = () => {
-
-  const [ singleProduct, setSingleProduct] = useState([])
- 
-
-
   const {id} = useParams();
+  const [ singleProduct, setSingleProduct] = useState([])
+  const [cartItem, setCartItem] = useState([]);
+
 
   useEffect(()=>{
     const fetchSingleProduct = async () => {
@@ -102,27 +100,41 @@ const SingleProductPage = () => {
   fetchSingleProduct()
   }, [])
 
+  const onAdd = (singleProduct) => {
+    const exist = cartItem.find((x) => x.id === singleProduct.id);
+    if(exist){
+      setCartItem(
+        cartItem.map((x)=>
+        x.id === singleProduct.id ? {...exist, qty: exist.qty +1 } : x
+        )
+      );
+    } else{
+      setCartItem([...cartItem, {...singleProduct, qty:1 }])
+    }
+    console.log("cart contains:", cartItem)
+  };
+
   return (
     <Container>
       <Wrapper>
+
         <ImageContainer>
           <Image src={singleProduct.image} />
         </ImageContainer>
 
         <InfoContainer>
-          {/* These are place holders for API info: title, description, and price */}
+
           <Title>{singleProduct.title}</Title>
           <Description> {singleProduct.description}</Description>
           <Price> {singleProduct.price}</Price>
 
-          {/* This is the container for the add to cart button. needs useState functionality */}
           <AddContainer>
               <AmountContainer>
                 <RemoveIcon />
                 <Amount>1</Amount>
                 <AddIcon />
               </AmountContainer>
-             <Button>Add To Cart</Button> 
+             <Button onClick={onAdd}>Add To Cart</Button> 
           </AddContainer>
 
         </InfoContainer>

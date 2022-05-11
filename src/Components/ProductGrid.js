@@ -1,6 +1,5 @@
 import React , {useContext} from 'react'
 import styled from 'styled-components'
-import { SingleProductPage } from '../Pages'
 import ProductCard from './ProductCard'
 import { DataContext } from '../Context/DataContext'
 
