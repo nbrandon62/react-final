@@ -57,8 +57,7 @@ const Price = styled.div`
 `
 
 const ProductCard = ({ product , id }) => {
-
-
+  
   const navigate = useNavigate(); 
 
   const handleClick = (id) => {
