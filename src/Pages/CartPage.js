@@ -38,7 +38,7 @@ const Total = styled.div`
   padding: 0px 15px;
 `
 
-const Cart = () => {
+const CartPage = () => {
 
   
 
@@ -64,4 +64,4 @@ const Cart = () => {
   )
 }
 
-export default Cart
+export default CartPage

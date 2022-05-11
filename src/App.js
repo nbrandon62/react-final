@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/productpage" element={<ProductPage />} />
         <Route path="/productpage/:id" element={<SingleProductPage />} />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
       <Footer />

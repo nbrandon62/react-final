@@ -25,9 +25,12 @@ const CartWrapper = styled.div`
   flex:1;
   text-align: end;
 `
-const ShoppingCart = styled.div`
+const ShoppingCart = styled.button`
   font-size: 20px;
   cursor: pointer;
+  color-black;
+  background: none;
+	border: none;
 `
 const styledObject ={textDecoration: "none"};
 
@@ -39,11 +42,13 @@ const NavBar = () => {
           <Logo> AllMart </Logo>
         </Link>
         <CartWrapper>
-          <ShoppingCart>
-            <Badge badgeContent={10} color="primary">
-              <ShoppingCartOutlinedIcon />
-            </Badge>
-          </ShoppingCart>
+          <Link to="/cart">
+            <ShoppingCart>
+              <Badge badgeContent={10} color="primary">
+                <ShoppingCartOutlinedIcon />
+              </Badge>
+            </ShoppingCart>
+          </Link>
         </CartWrapper>
 
       </Wrapper>
