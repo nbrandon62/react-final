@@ -2,7 +2,7 @@ import React , { useEffect, useState, useContext} from 'react';
 import styled from 'styled-components';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 
@@ -67,7 +67,7 @@ const Amount = styled.span`
   justify-content: center;
   margin: 2px 10px;
 `
-const Button = styled.button`
+const CartButton = styled.button`
   padding: 10px;
   border: 1px solid black;
   background-color: white;
@@ -80,10 +80,23 @@ const Button = styled.button`
 //   cursor: pointer;
 // `
 
+const ShopButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 90%;
+`
+const ShopButton = styled.button`
+  padding: 10px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer; 
+`
+
 const SingleProductPage = () => {
   const {id} = useParams();
   const [ singleProduct, setSingleProduct] = useState([])
-  const [cartItem, setCartItem] = useState([]);
+  const [ cartItem, setCartItem ] = useState([]);
 
 
   useEffect(()=>{
@@ -100,6 +113,7 @@ const SingleProductPage = () => {
   fetchSingleProduct()
   }, [])
 
+  // this is the add to cart button function
   const onAdd = (singleProduct) => {
     const exist = cartItem.find((x) => x.id === singleProduct.id);
     if(exist){
@@ -134,8 +148,14 @@ const SingleProductPage = () => {
                 <Amount>1</Amount>
                 <AddIcon />
               </AmountContainer>
-             <Button onClick={onAdd}>Add To Cart</Button> 
+             <CartButton onClick={onAdd}>Add To Cart</CartButton> 
           </AddContainer>
+
+          <ShopButtonContainer>
+            <Link to="/productpage" >
+              <ShopButton> Keep Shopping </ShopButton>
+            </Link>
+          </ShopButtonContainer>
 
         </InfoContainer>
       </Wrapper>
