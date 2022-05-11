@@ -17,7 +17,7 @@ const Container = styled.div`
 const Arrow = styled.div`
     width: 50px;
     height: 50px; 
-    background-color: white;
+    background-color: transparent;
     cursor: pointer;
     position: absolute;
     display: flex;
@@ -48,9 +48,9 @@ const ImageContainer = styled.div`
     margin-left: 5rem;
 
 `
-const Image = styled.div`
+const Image = styled.img`
     height: 90%;
-    background-color: black;
+    width: 100%;
 `
 const InfoContainer = styled.div`
     flex: 1;
@@ -73,6 +73,7 @@ const Button = styled.button`
 
 
 const Jumbotron = () => {
+
     const [jumboIndex, setJumboIndex] = useState(0);
     const handleClick = (direction) => {
         if(direction === "left"){
@@ -80,7 +81,8 @@ const Jumbotron = () => {
         } else{
             setJumboIndex(jumboIndex < 2 ? jumboIndex +1 : 0);
         }
-    };
+    };    
+
 
   return (
     <Container>
@@ -92,7 +94,9 @@ const Jumbotron = () => {
         <Wrapper jumboIndex = { jumboIndex }>
             {jumboItems.map(item=>(
               <Slide>
-                <ImageContainer> <Image /> </ImageContainer>
+                <ImageContainer> 
+                    <Image src={item.img}/> 
+                </ImageContainer>
                 <InfoContainer>
                     <Title>{item.title}</Title>
                     <Description>{item.description}</Description>
