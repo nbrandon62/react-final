@@ -15,13 +15,13 @@ const Wrapper = styled.div`
 `
 const ImageContainer = styled.div`
   flex: 2;
-  height: 500px;
+  height: 80vh;
   width: 350px;
 `
 const Image = styled.img`
   width: 100%;
-  height: 80vh;
-  object-fit:cover;
+  height: 100%;
+  object-fit: contain;
 `
 const InfoContainer = styled.div` 
   flex: 1;
@@ -87,7 +87,7 @@ const ShopButtonContainer = styled.div`
   width: 90%;
 `
 const ShopButton = styled.button`
-  padding: 10px;
+  padding: 15px;
   border: 1px solid black;
   background-color: white;
   cursor: pointer; 

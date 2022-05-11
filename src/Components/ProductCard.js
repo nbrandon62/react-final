@@ -23,6 +23,7 @@ const ImageContainer = styled.div`
 const Image = styled.img`
   width: 85%;
   height: 80%;
+  object-fit: contain;
 `
 const DescriptionContainer = styled.div`
   display: flex;
