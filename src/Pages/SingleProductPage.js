@@ -108,6 +108,7 @@ const SingleProductPage = () => {
   }, []);
 
   // this is the add to cart button function
+
   // const onAdd = (singleProduct) => {
   //   const exist = cartItem.find((x) => x.id === singleProduct.id);
   //   if (exist) {
@@ -123,12 +124,6 @@ const SingleProductPage = () => {
   //     localStorage.setItem("cart", cart);
   //   }
   //   console.log("cart contains:", cartItem);
-  // };
-
-  // const handleClick = () => {
-  //   setCartItem([...cartItem, singleProduct]);
-  //   let cart = JSON.stringify([...cartItem, singleProduct]);
-  //   localStorage.setItem("cart", cart);
   // };
 
   return (

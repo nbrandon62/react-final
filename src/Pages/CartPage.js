@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { CartContext } from "../Context/CartContext.js";
 
 const Container = styled.div`
   display: flex;
@@ -38,36 +37,22 @@ const Total = styled.div`
 `;
 
 const CartPage = () => {
-  const { cart } = React.useContext(CartContext);
-
   return (
-    // <Container>
+    <Container>
+      <LeftWrapper>
+        <LeftContainer> My Items </LeftContainer>
+      </LeftWrapper>
 
-    <div>
-      {cart.map((cartItem, index) => (
-        <div key={index}>
-          <div>{cartItem}</div>
-        </div>
-      ))}
-    </div>
+      <RightWrapper>
+        <RightContainer>
+          <Quantity>Quantity</Quantity>
+          <Price>Price</Price>
+          <Total>Total</Total>
+        </RightContainer>
+      </RightWrapper>
 
-    //   <LeftWrapper>
-    //     <LeftContainer> My Items </LeftContainer>
-    //   </LeftWrapper>
-
-    //   <RightWrapper>
-    //     <RightContainer>
-    //       <Quantity>Quantity</Quantity>
-    //       <Price>Price</Price>
-    //       <Total>Total</Total>
-    //     </RightContainer>
-    //   </RightWrapper>
-
-    // <div>
-    //   {/* {cartItem.length === 0 && <div>Cart is empty</div> } */}
-    // </div>
-
-    // </Container>
+      <div>{/* {cartItem.length === 0 && <div>Cart is empty</div> } */}</div>
+    </Container>
   );
 };
 
