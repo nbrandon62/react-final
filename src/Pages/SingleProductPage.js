@@ -91,7 +91,6 @@ const SingleProductPage = () => {
 
   const { id } = useParams();
   const [singleProduct, setSingleProduct] = useState({});
-  // const [cartItem, setCartItem] = useState([]);
 
   useEffect(() => {
     const fetchSingleProduct = async () => {
