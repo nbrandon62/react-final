@@ -20,7 +20,7 @@ I had some trouble loading up this application onto another machine, before npm 
 ``` 
 "scripts": {
      "start": "react-scripts --openssl-legacy-provider start"
-     ```
+     
 
 - I believe the issue I was having was installing old versions of the dependencies within this project, and these fixed my issue of not being able to run this react-final project on my new machine. 
 
