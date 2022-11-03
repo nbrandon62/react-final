@@ -7,17 +7,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 I had some trouble loading up this application onto another machine, before npm start you should make sure of a few things: 
 - in the project terminal run: 
 
-### `npm install '--legact-peer-deps'
+### `npm install '--legacy-peer-deps'`
 
 - in the package.json file in the project, navigate to the:
 
-###  `"scripts": {
-###    "start": "react-scripts"`
-
+ ```
+ "scripts": {`
+  "start": "react-scripts"`
+  ```
 - and replace it with: 
 
-### `  "scripts": {
-###      "start": "react-scripts --openssl-legacy-provider start"
+``` 
+"scripts": {
+     "start": "react-scripts --openssl-legacy-provider start"
+     ```
 
 - I believe the issue I was having was installing old versions of the dependencies within this project, and these fixed my issue of not being able to run this react-final project on my new machine. 
 
