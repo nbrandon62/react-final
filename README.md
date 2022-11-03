@@ -12,8 +12,8 @@ I had some trouble loading up this application onto another machine, before npm 
 - in the package.json file in the project, navigate to the:
 
  ```
- "scripts": {`
-  "start": "react-scripts"`
+ "scripts": {
+  "start": "react-scripts"
   ```
 - and replace it with: 
 
